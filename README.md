@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Report</title>
@@ -62,7 +61,6 @@
        string in a desired way, it is more handy than using "explode()" if you know how to
        use it.
     </p>
-
     <p>
       Because in practical use, many different type of failure or error could occur, it is
       reasonable to let user know what kind of failure occurred,
@@ -112,7 +110,6 @@
           &nbsp&nbspreturn $this->$property;<br/>
         &nbsp}<br/>
       }<br/>
-
       public function __set($property, $value){<br/>
         &nbspif(property_exists($this,$property)){<br/>
           &nbsp&nbsp$this->$property = $value;<br/>

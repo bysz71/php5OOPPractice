@@ -1,8 +1,4 @@
 <html>
-  <head>
-    <title>Report</title>
-    <link rel = "stylesheet" type = "text/css" href = "report.css">
-  </head>
   <body>
     <h1>php5OOPractice</h1>
     <hr>
@@ -355,7 +351,6 @@
         &nbsp}<br/>
         &nbspreturn $summary;<br/>
       }<br/>
-
       //return count of account<br/>
       public function count(){<br/>
         &nbspreturn count($this->accounts);<br/>
@@ -369,7 +364,6 @@
       Although I did not implement it, I prepared for the possibility.
       I store console log in an array so that the
       Bank::console_log can be easily parsed into json format string and pass to the front end.<br/><br/>
-
       This assignment is a really good practice of OO programming.
     </p>
   </body>

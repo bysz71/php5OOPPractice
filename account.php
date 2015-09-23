@@ -11,49 +11,49 @@
 //  4: tranz invalid format
 
 class Account{
-  protected $id;
-  protected $balance;
-
-  //constructor
-  function __construct($id, $balance){
-    $this->id = $id;
-    $this->balance = $balance;
-  }
-
-  //property getter
-  public function __get($property){
-    if(property_exists($this,$property)){
-      return $this->$property;
+    protected $id;
+    protected $balance;
+    
+    //constructor
+    function __construct($id, $balance){
+        $this->id = $id;
+        $this->balance = $balance;
     }
-  }
-
-  //property setter
-  public function __set($property, $value){
-    if(property_exists($this,$property)){
-      $this->$property = $value;
+    
+    //property getter
+    public function __get($property){
+        if(property_exists($this,$property)){
+            return $this->$property;
+        }
     }
-  }
-
-  //perform withdraw on this account
-  //will return true if withdraw is successful
-  //will return false if fund's insufficient
-  public function withdraw($amount){
-    if($this->balance < $amount){
-      return 2;
-    }else{
-      $this->balance -= $amount;
-      return 0;
+    
+    //property setter
+    public function __set($property, $value){
+        if(property_exists($this,$property)){
+            $this->$property = $value;
+        }
     }
-  }
-
-  //perform deposit on this account
-  public function deposit($amount){
-    $this->balance += $amount;
-  }
-
-  //return a string of account summary
-  public function summary(){
-    return "ID: " . $this->id . " ; Balance: $". $this->balance;
-  }
+    
+    //perform withdraw on this account
+    //will return true if withdraw is successful
+    //will return false if fund's insufficient
+    public function withdraw($amount){
+        if($this->balance < $amount){
+            return 2;
+        }else{
+            $this->balance -= $amount;
+            return 0;
+        }
+    }
+    
+    //perform deposit on this account
+    public function deposit($amount){
+        $this->balance += $amount;
+    }
+    
+    //return a string of account summary
+    public function summary(){
+        return "ID: " . $this->id . " ; Balance: $". $this->balance;
+    }
 }
 ?>
